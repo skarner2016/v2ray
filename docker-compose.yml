@@ -1,0 +1,10 @@
+version: "3"
+services:
+
+  v2ray:
+    image: v2ray/official:latest
+    volumes:
+      - /etc/v2ray:/etc/v2ray
+    ports:
+      - 16823:16823
+    command: ["v2ray", "-config=/etc/v2ray/config.json"]
